@@ -130,6 +130,8 @@ if __name__ == "__main__" :
                 # img = cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 255, 255), 2)
                 cv2.putText(outOpencvDnn, str(identity), (x1 + 5, y1 - 5), font, 1, (255, 255, 255), 2)
 
+        label = "OpenCV DNN ; FPS : {:.2f}".format(fpsOpencvDnn)
+        cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
         cv2.imshow("Face Detection Comparison", outOpencvDnn)
 
         if frame_count == 1:
